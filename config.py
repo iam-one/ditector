@@ -1,1 +1,1 @@
-DATA_PATH = "./data.txt"
+DATA_PATH = "./data/"

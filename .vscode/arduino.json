@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "sketch": "vitector.vitector.ino",
-    "port": "/dev/"
+    "sketch": "vitector/vitector.ino",
+    "port": "/dev/tty.usbmodem1101"
 }
