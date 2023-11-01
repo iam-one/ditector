@@ -1,11 +1,12 @@
-import datetime
+from datetime import datetime
 from serial import Serial
 
 from config import DATA_PATH
 
 ser = Serial()
+# ser.port = "/dev/cu.usbmodem1201"
 ser.port = "/dev/tty.usbmodem1201"
-ser.baudrate = 115200
+ser.baudrate = 9600
 ser.timeout = 1
 
 ser.open()
