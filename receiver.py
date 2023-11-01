@@ -11,7 +11,7 @@ ser.timeout = 1
 
 ser.open()
 
-with open(DATA_PATH + datetime.today().strftime("%y%m%d.%H%M%S.") + ".txt", 'w', encoding="utf-8") as file:
+with open(DATA_PATH + datetime.today().strftime("%y%m%d.%H%M%S") + ".txt", 'w', encoding="utf-8") as file:
     try:
         while True:
             if ser.readable():

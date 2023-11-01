@@ -5,11 +5,10 @@ from scipy.optimize import curve_fit
 
 from config import DATA_PATH
 
-resVol, indVol, resCur, indCur, timeStamp = [], [], [], [], []
-
 sampleCur = [-1, 0, 3, 6, 9, 12, -7]
 sampleTime = np.linspace(0, len(sampleCur) * 0.25, len(sampleCur))
 
+current = []
 maxCur = []
 minCur = []
 
@@ -23,12 +22,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     with open(DATA_PATH + str(args.data), 'r', encoding="utf-8") as file:
-        # for i, line in enumerate(file.readlines):
-        #     resVol[i] = line.split(",")[0]
-        #     indVol[i] = line.split(",")[1]
-        #     resCur[i] = line.split(",")[2]
-        #     indCur[i] = line.split(",")[3]
-        #     timeStamp[i] = line.split(",")[-1]
+        for i, line in enumerate(file.readlines):
+            current = line
 
             #TODO: show plt graph for 4 datas by timestamp
             #TODO: get max/min of Current
